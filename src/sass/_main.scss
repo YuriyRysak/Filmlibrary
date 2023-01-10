@@ -1,0 +1,237 @@
+///////////////////////////style home page////////////////////////////////
+.container-main {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.gallery-films__link:hover {
+    text-decoration: none;
+}
+
+.gallery-films__card {
+    object-fit: cover;
+    width: 100%;
+    height: 402px;
+
+    margin-bottom: 8px;
+}
+
+
+.gallery-films__hero {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.library-film {
+    display: flex;
+    align-items: center;
+}
+.post-film {
+    display: flex;
+    align-items: center;
+}
+
+.post-film__description {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    color: var(--accent-color);
+}
+
+.post-film__item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.post-film__item:nth-child(1) {
+    padding-right: 8px;
+    border-right: 1px solid var(--accent-color);
+}
+
+.post-film__rating {
+    width: 36px;
+    height: 18px;
+    background: #FF6B01;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-film__rating-description {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 767px) {
+    .gallery-films__item:not(:last-child) {
+            margin-bottom: 20px;
+        }
+}
+
+@media screen and (min-width: 768px) {
+    .container-main {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .gallery-films__card {
+        height: 455px;
+    }
+    .gallery-films {
+        margin: -16px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .gallery-films__item {
+        width: calc((100% - 2 * 32px) / 2);
+        margin: 16px;
+        transform: scale(1.0);
+        transition: transform 250ms linear;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+}
+
+@media screen and (min-width: 1280px) {
+    .gallery-films__card {
+        height: 574px;
+    }
+    .post-film__rating {
+            width: 40px;
+            height: 20px;
+    }
+
+    .gallery-films__card {
+        margin-bottom: 12px;
+        }
+
+    .gallery-films__hero {
+        font-size: 20px;
+        line-height: 1.2;
+        }
+        
+    .post-film__description {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .gallery-films {
+        margin: -8px;
+        margin-bottom: -24px;
+    }
+    .gallery-films__item {
+        width: calc((100% - 3 * 16px) / 3);
+        margin: 8px;
+       
+    }
+    .gallery-films__item {
+        margin-bottom: 24px;
+    }
+
+    .post-film__item:nth-child(1) {
+        border-right: 2px solid var(--accent-color);
+    }
+}
+
+
+/////////////////////////////////style library////////////////////////////////////
+
+.library-film__item {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    color: var(--accent-color);
+}
+.library-film__item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.library-film__item:nth-child(1) {
+    padding-right: 8px;
+    border-right: 1px solid var(--accent-color);
+}
+
+.library-film__rating {
+    width: 36px;
+    height: 18px;
+    background: #FF6B01;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.library-film__rating-description {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    color: #FFFFFF;
+}
+
+.no-movies-text {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        width: 100px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+}
+@media screen and (min-width: 1280px) {
+    .library-film__item {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .library-film__item:nth-child(1) {
+        border-right: 2px solid var(--accent-color);
+    }
+
+    // .library-film__description {
+        
+    // }
+    .library-film__rating {
+        width: 40px;
+        height: 20px;
+    }
+
+    .no-movies-text img {
+        width: 230px;
+    }
+
+}
+
+
+
+
+// Стилі для пагінації
+.tui-pagination .tui-is-selected,
+.tui-pagination strong {
+
+    border-radius: 5px;
+    background-color: var(--accent-color) !important; 
+    border-color: transparent !important;
+} 
+.tui-page-btn{
+    border-color: transparent !important;
+}
+.tui-first, .tui-prev, .tui-last,
+.tui-next{
+    background-color: #F7F7F7
+}

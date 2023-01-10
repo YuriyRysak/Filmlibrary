@@ -1,0 +1,65 @@
+<header class="header">
+<div class="header__wrapper header-library">
+    <div class="container header__container">
+    <div class="nav-container">
+      <a class="header__logo" href="./index.html">
+        <svg class="logo-icon" width="24" height="24">
+          <use href="./images/sprite.svg#icon-film"></use>
+        </svg>
+        <span class="header__logo--hidden">Filmoteka</span>
+      </a>
+        <nav class="nav">
+          <ul class="auth-nav__list">
+            <li class="auth-nav__item">
+              <button class="auth-btn login__btn" type="button">Log in</button>
+            </li>
+            <li class="auth-nav__item">
+              <button class="auth-btn logout__btn" type="button">
+                Log out
+              </button>
+            </li>
+          </ul>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a
+                class="nav__link home-link"
+                href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav__item">
+              <a class="nav__link library-link nav__link--active" href="./library.html"
+                >My library</a
+              >
+            </li>
+          </ul>
+        </nav>
+    </div>
+    <div class="library-box">
+          <button type="button" class="library-btn accent-btn" id="watched-btn">
+            Watched
+          </button>
+          <button type="button" class="library-btn" id="queue-btn">Queue</button>
+        </div>
+      </div>
+  </div>
+</div>
+</header>
+<button class="arrow-btn" href="">
+  <svg class="arrow-btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M16 7.328v-3.328l8 8-8 8v-3.328l-16-4.672z" />
+  </svg>
+</button>
+
+<div class="preloader">
+  <div class="preloader__row">
+    <div class="preloader__item"></div>
+    <div class="preloader__item"></div>
+  </div>
+</div>
+
+<div class="pagination">
+  <ul>
+    <!--pages or li are comes from javascript -->
+  </ul>
+</div>

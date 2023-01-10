@@ -1,2 +1,12 @@
+@import './variables';
 @import './common';
-@import './example';
+@import './main';
+@import './normalize';
+@import './footer';
+@import './header';
+@import './modal';
+@import './modal-team';
+
+@import './loader-scroll.scss';
+@import './registration-modal';
+@import './change-theme'

@@ -1,0 +1,57 @@
+<header class="header">
+  <div class="header__wrapper">
+    <div class="container header__container">
+      <div class="nav-container">
+        <a class="header__logo" href="./index.html">
+          <svg class="logo-icon" width="24" height="24">
+            <use href="./images/sprite.svg#icon-film"></use>
+          </svg>
+          <span class="header__logo--hidden">Filmoteka</span>
+        </a>
+        <nav class="nav">
+          <ul class="auth-nav__list">
+            <li class="auth-nav__item">
+              <button class="auth-btn login__btn" type="button">Log in</button>
+            </li>
+            <li class="auth-nav__item">
+              <button class="auth-btn logout__btn" type="button">
+                Log out
+              </button>
+            </li>
+          </ul>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a
+                class="nav__link nav__link--active home-link"
+                href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav__item">
+              <a class="nav__link library-link" href="./library.html"
+                >My library</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="form-wrapper">
+        <form class="movie-search" id="movie-search">
+          <input
+            id="search-input"
+            type="text"
+            class="search-input"
+            name="query"
+            autocomplete="off"
+            placeholder="Movie search"
+          />
+          <button type="submit" class="submit-btn">
+            <svg class="search-icon" width="12" height="12">
+              <use href="./images/sprite.svg#icon-search"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
