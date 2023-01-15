@@ -8,45 +8,56 @@ import {
   signOut,
   setPersistence,
   browserLocalPersistence,
-  browserSessionPersistence,
-  inMemoryPersistence,
+  // browserSessionPersistence,
+  // inMemoryPersistence,
 } from 'firebase/auth';
 // ==================firebaseConfig===============================
-const firebaseConfig = initializeApp({
-  apiKey: 'AIzaSyBwIHbipBLGGO3rbF9X_3hWkD1LKg_9nto',
-  authDomain: 'filmoteka-auth-d1821.firebaseapp.com',
-  projectId: 'filmoteka-auth-d1821',
-  storageBucket: 'filmoteka-auth-d1821.appspot.com',
-  messagingSenderId: '528877394896',
-  appId: '1:528877394896:web:a8dabe5ad1904b525c77d5',
-});
+// const firebaseConfig = initializeApp({
+//   apiKey: 'AIzaSyBwIHbipBLGGO3rbF9X_3hWkD1LKg_9nto',
+//   authDomain: 'filmoteka-auth-d1821.firebaseapp.com',
+//   projectId: 'filmoteka-auth-d1821',
+//   storageBucket: 'filmoteka-auth-d1821.appspot.com',
+//   messagingSenderId: '528877394896',
+//   appId: '1:528877394896:web:a8dabe5ad1904b525c77d5',
+// });
+const firebaseConfig = {
+  apiKey: "AIzaSyBl5SaGWDBoXNFTgYkPi1ymvworRC_pleE",
+  authDomain: "filmoteka-registration.firebaseapp.com",
+  databaseURL: "https://filmoteka-registration-default-rtdb.firebaseio.com",
+  projectId: "filmoteka-registration",
+  storageBucket: "filmoteka-registration.appspot.com",
+  messagingSenderId: "469553931635",
+  appId: "1:469553931635:web:189a4bd682716d76b81106"
+};
+
+
 // ===============================================================
 const auth = getAuth(firebaseConfig);
 // ===============================================================
 const logInButtonRef = document.querySelector('.auth-btn');
 const logOutButtonRef = document.querySelector('.logout__btn');
 const modalWindow = document.querySelector('.container__form');
-const rowRef = document.querySelector('.row');
-const backDropRef = document.querySelector('.backdrop');
-const closeModalBtnRef = document.querySelector('.fa-solid');
+// const rowRef = document.querySelector('.row');
+// const backDropRef = document.querySelector('.backdrop');
+// const closeModalBtnRef = document.querySelector('.fa-solid');
 const checkBoxRef = document.querySelector('.form-check-input');
 const formButtonSignUpRef = document.querySelector('.btn__signup');
 const formButtonLogInRef = document.querySelector('.btn__login');
 const formRef = document.querySelector('.form');
 let firstPassInputRef = document.querySelector('#firstPass');
-const repeatPassInputRef = document.querySelector('#repeatedPass');
-const userNameInputRef = document.querySelector('#userName');
+// const repeatPassInputRef = document.querySelector('#repeatedPass');
+// const userNameInputRef = document.querySelector('#userName');
 let userEmailInputRef = document.querySelector('#userEmail');
-const loginLinkRef = document.querySelector('.login__link');
+// const loginLinkRef = document.querySelector('.login__link');
 let libraryLinkRef = document.querySelector('.library-link');
 // ===============================================================
 // libraryLinkRef.addEventListener('click', onLibraryLinkClick);
 formButtonSignUpRef.disabled = true;
 // ===============================================================
-function enableLibraryLink() {
-  libraryLinkRef = document.querySelector('.library-link');
-  libraryLinkRef.removeEventListener('click', onLibraryLinkClick);
-}
+// function enableLibraryLink() {
+//   libraryLinkRef = document.querySelector('.library-link');
+//   libraryLinkRef.removeEventListener('click', onLibraryLinkClick);
+// }
 // ===============================================================
 logInButtonRef.addEventListener('click', onLoginBtnClick);
 checkBoxRef.addEventListener('change', onToggle);
@@ -165,7 +176,7 @@ async function isUserAlreadyLogedIn() {
 
   onAuthStateChanged(auth, user => {
     if (user) {
-      Notiflix.Notify.success('You are loged in');
+      Notiflix.Notify.success('You are login in');
       logOutButtonRef.disabled = false;
     } else {
       console.log(error);
